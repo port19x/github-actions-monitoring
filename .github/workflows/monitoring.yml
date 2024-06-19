@@ -30,9 +30,6 @@ jobs:
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
 
-      - name: test ssh connection
-        run: date +%H:%M-%D
-      
       - name: generate csv line
         run: |
           echo $(date +%H:%M-%D),\
