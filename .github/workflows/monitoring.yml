@@ -47,6 +47,5 @@ jobs:
           commit_message: bump stats.csv
           repository: .
           file_pattern: stats.csv
-          commit_author: port19 <port19@port19.xyz>
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
