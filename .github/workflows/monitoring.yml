@@ -4,6 +4,9 @@ on:
  schedule:
    - cron: "15 * * * *"
 
+permissions:
+  contents: write
+
 jobs:
   monitoring:
     name: Monitoring with Github Actions
@@ -39,7 +42,7 @@ jobs:
           | tr -d " " >> stats.csv
 
       - name: auwuto commit uwu
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: bump stats.csv
           repository: .
